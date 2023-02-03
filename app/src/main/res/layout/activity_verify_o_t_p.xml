@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SurfaceBackColor"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:text="Co\nde"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/primaryColor"
+        android:textSize="100sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:text="Verification"
+        android:textAllCaps="true"
+        android:textColor="@color/primaryColor"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/code_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="Enter One time password sent \n"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="16sp" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/pin_view"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="@color/SurfaceFrontColor"
+        android:textColor="@color/primaryTextColor"
+        app:cursorColor="@color/secondaryDarkColor"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="50dp"
+        app:itemRadius="5dp"
+        app:itemWidth="50dp"
+        app:lineColor="@color/primaryDarkColor" />
+
+    <Button
+        android:id="@+id/verify_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bg"
+        android:text="Verify OTP"
+        android:textColor="@color/secondaryTextColor" />
+</LinearLayout>

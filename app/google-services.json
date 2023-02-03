@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "659362234073",
+    "firebase_url": "https://foodonors-8e3d7-default-rtdb.firebaseio.com",
     "project_id": "foodonors-8e3d7",
     "storage_bucket": "foodonors-8e3d7.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "659362234073-mcksbn5sreb5augp096g62m9evj43aka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodonors",
+            "certificate_hash": "d8db0bf792a17ff0263aa9a35d8814ca1ee483e6"
+          }
+        },
         {
           "client_id": "659362234073-e9grgo37n9pjmdqtmt6c664oothg0396.apps.googleusercontent.com",
           "client_type": 3
