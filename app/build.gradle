@@ -3,12 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.foodonors'
     compileSdk 32
 
     defaultConfig {
         applicationId "com.example.foodonors"
-        minSdk 21
+        minSdk 28
         targetSdk 32
         versionCode 1
         versionName "1.0"
