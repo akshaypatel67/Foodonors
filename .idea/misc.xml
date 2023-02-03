@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Bhargav/AndroidStudioProjects/Foodonors/app/src/main/res/drawable/button_bg.xml" value="0.1325" />
+        <entry key="..\:/Users/Bhargav/AndroidStudioProjects/Foodonors/app/src/main/res/drawable/mobile.xml" value="0.1325" />
         <entry key="..\:/Users/Bhargav/AndroidStudioProjects/Foodonors/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
       </map>
     </option>

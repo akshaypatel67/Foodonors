@@ -9,11 +9,12 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
         android:text="Sign Up"
-        android:textColor="@color/primaryTextColor"
+        android:textColor="@color/primaryColor"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -28,7 +29,6 @@
         app:ccp_showNameCode="true" />
 
     <View
-        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginVertical="10dp"
@@ -39,6 +39,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         app:boxStrokeWidthFocused="2dp"
         app:endIconMode="clear_text"
         app:startIconDrawable="@drawable/mobile">
@@ -51,20 +52,16 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/mbl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:hint="Mobile Number"
-        android:inputType="number" />
-
     <Button
         android:id="@+id/btn_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_bg"
         android:text="Next"
         android:textColor="@color/secondaryTextColor"
         android:textSize="16sp"
         android:textStyle="bold" />
+
+
 </LinearLayout>
