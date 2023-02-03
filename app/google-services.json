@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "659362234073",
+    "project_id": "foodonors-8e3d7",
+    "storage_bucket": "foodonors-8e3d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659362234073:android:46069ceddd94de890488c8",
+        "android_client_info": {
+          "package_name": "com.example.foodonors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659362234073-e9grgo37n9pjmdqtmt6c664oothg0396.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuiqlm6X4oiwOrgQguuUztXqdyqS3_kYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659362234073-e9grgo37n9pjmdqtmt6c664oothg0396.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
