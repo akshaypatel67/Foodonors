@@ -1,11 +1,11 @@
-
 # Foodonor
+<b><h3> Problem Statement : (Social Cause) Designing a system for tracking and reducing food waste and garbage in local areas.</h3></b>
+### This Project was presented in (Swadheenta'23) Hack-Infinity Hackathon 2023.
 
 ## Overview
 Foodonor assists in managing food waste in daily life. Users and organisations register themselves and give food by the amount of food that has been wasted. Foodonor assists those who need food.
 
 Foodonor is an End-to-End application which manages food waste effectively.
-
 
 ## Work Progress
 
