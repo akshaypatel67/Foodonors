@@ -4,19 +4,33 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.icu.util.Calendar;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class DonateFood extends AppCompatActivity {
     TextInputEditText etPrepTime;
-    Button locationButton;
+    TextView locationText;
+    Button locationButton, submitButton;
+    LatLng location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +38,12 @@ public class DonateFood extends AppCompatActivity {
         setContentView(R.layout.activity_donate_food);
 
         locationButton = findViewById(R.id.btn_location);
+        locationText = findViewById(R.id.txt_address);
 
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MapsActivity.class);
-//                startActivity(i);
                 startActivityForResult(i, 2);
             }
         });
@@ -84,7 +98,49 @@ public class DonateFood extends AppCompatActivity {
             timePickerDialog.show();
             datePickerDialog.show();
         });
+
+        submitButton = findViewById(R.id.btn_next);
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode == 2) {
+            if(resultCode == 2) {
+                Log.d("test", "test");
+                Double latitude = data.getDoubleExtra("latitude", 0);
+                Double longitude = data.getDoubleExtra("longitude", 0);
+
+                location = new LatLng(latitude, longitude);
+
+                //            locationName.setText((int) (location.latitude + location.longitude));
+                System.out.println("location" + location);
+
+
+                Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+
+                List<Address> addresses  = null;
+                try {
+                    addresses = geocoder.getFromLocation(location.latitude ,location.longitude, 1);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                String address = addresses.get(0).getAddressLine(0);
+
+                locationText.setText(address);
+            }
+
+            else {
+                location = null;
+            }
+        }
+    }
 }
