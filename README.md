@@ -50,7 +50,7 @@ Foodonor is an End-to-End application which manages food waste effectively.
 **Database:** [Firebase](https://firebase.google.com/docs)
 
 
-## Authors
+## Authors(M0JiLA CODeRS)
 
 - [@Akshay Patel](https://www.github.com/akshaypatel67)
 - [@Bhargav Modha](https://www.github.com/bhargav-modha)
