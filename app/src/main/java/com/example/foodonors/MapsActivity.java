@@ -4,9 +4,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -42,6 +45,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        btnSave = findViewById(R.id.btnSave);
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("maps activity lat"+ loc.latitude);
+                System.out.println("maps activity lng"+ loc.longitude);
+
+                Intent intent=new Intent();
+                intent.putExtra("latitude",loc.latitude);
+                intent.putExtra("longitude",loc.longitude);
+                setResult(2,intent);
+                finish();
+            }
+        });
     }
 
     /**
@@ -82,7 +101,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         // Got last known location. In some rare situations this can be null.
                         if (location != null) {
                             // Logic to handle location object
-                            System.out.println("location" + location);
+                            Log.d("location", String.valueOf(location));
 
                             // Add a marker at current location and move the camera
                             LatLng currLoc = new LatLng(location.getLatitude(), location.getLongitude());
@@ -103,4 +122,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
     }
+
+
 }
