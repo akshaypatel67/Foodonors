@@ -36,6 +36,9 @@ public class VerifyOTP extends AppCompatActivity {
     String mVerificationId;
     Button verifyOTP;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    String fullName, phoneNo, email, password;
+    TextView phoneNum;
+
     private final PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         @Override
@@ -65,8 +68,7 @@ public class VerifyOTP extends AppCompatActivity {
             mVerificationId = verificationId;
         }
     };
-    String phoneNo;
-    TextView phoneNum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,9 +79,13 @@ public class VerifyOTP extends AppCompatActivity {
         verifyOTP = findViewById(R.id.verify_otp);
         phoneNum = findViewById(R.id.code_phone_num);
 
+        fullName = getIntent().getStringExtra("fullName");
+        email = getIntent().getStringExtra("email");
+        password = getIntent().getStringExtra("password");
         phoneNo = getIntent().getExtras().getString("phoneno");
-        sendVerificationCodeToUser(phoneNo);
+
         phoneNum.setText(String.format("%s on %s", phoneNum.getText(), phoneNo));
+        sendVerificationCodeToUser(phoneNo);
 
         verifyOTP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +93,6 @@ public class VerifyOTP extends AppCompatActivity {
                 callNextScreenFromOTP(view);
             }
         });
-
     }
 
     private void callNextScreenFromOTP(View view) {
@@ -123,11 +128,11 @@ public class VerifyOTP extends AppCompatActivity {
                             FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
                             DatabaseReference reference = rootNode.getReference("Users");
 
-                            UserHelperClass addNewUser = new UserHelperClass(phoneNo);
+                            UserHelperClass addNewUser = new UserHelperClass(fullName, phoneNo, email, password);
                             reference.child(phoneNo).setValue(addNewUser);
 
                             SessionManager sessionManager = new SessionManager(getApplicationContext(), SessionManager.SESSION_USERSESSION);
-                            sessionManager.createLoginSession(phoneNo);
+                            sessionManager.createLoginSession(fullName, email, password, phoneNo);
 
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);
