@@ -2,6 +2,8 @@
 <b><h3> Problem Statement : (Social Cause) Designing a system for tracking and reducing food waste and garbage in local areas.</h3></b>
 ### This Project was presented in (Swadheenta'23) Hack-Infinity Hackathon 2023.
 
+Admin Panel Repository link: https://github.com/bhargav-modha/Foodonors-Admin-Panel
+
 ## Overview
 Foodonor assists in managing food waste in daily life. Users and organisations register themselves and give food by the amount of food that has been wasted. Foodonor assists those who need food.
 
@@ -82,9 +84,13 @@ Foodonor is an End-to-End application which manages food waste effectively.
 
 - Donor Side Android App
 
-<img src="https://user-images.githubusercontent.com/56217073/216752608-8e816e29-653e-471c-8918-f5135177d0c0.png" width="30%"></img>
-<img src="https://user-images.githubusercontent.com/56217073/216752591-4465be1c-ca6b-47cb-b391-3aa0b4672f5c.png" width="30%"></img> 
-<img src="https://user-images.githubusercontent.com/56217073/216752507-9ca69867-3eba-437c-a210-9bccaa480459.png" width="30%"></img> 
+<img src="https://user-images.githubusercontent.com/56217073/216780532-368c9616-5b1b-422b-97c1-a90cd9fd7167.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216780534-5dfd34c3-f8d7-4980-b685-68fa633d6f5b.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216780539-68da2b43-fc03-480c-b832-19a860c0653b.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216780549-750f80e3-e4a2-4256-ab2a-eeacfbe40957.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216780561-077819a1-0b37-4d83-87fc-571728ec287b.png" width="30%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216780569-ed1a6dd5-6e73-448c-bb1d-c9dbbb0731b8.png" width="30%"></img>
+
 
 - Admin Panel for Request and NGO Tracking
 
@@ -95,8 +101,20 @@ Foodonor is an End-to-End application which manages food waste effectively.
 
 
 </details>
+
 <details>
-  <summary><h2>Work done betwwen Phase 1 & Phase 2<h2></summary>
+  <summary><h2>Work done between Phase 1 & Phase 2<h2></summary>
+  
+  - UI Design of Landing Page has been created that allows the NGO's and other social organizations to be a part for leading food donation service community.
+  - Integration of google maps API in landing page to get precise location of the organization requesting in admin panel
+  - Maps Activity of android app features location of the donor of food which helps admin panel track the nearest ngo organization to find the food resulting in an efficient way to make leftover foods usefull
+  - Android apps login(new: use of sessions) was made better with login and signup using firebase
+  - OTP verification of the user for checking users autheticity was implemented in android app
+  - Full implementation food donation activity of android was done
+  - Connection of Admin Panel with firebase
+  - Responsive design of Admin Panel was done
+  - NGO and other organization request verification through Email was implemented in admin panel
+  
 </details>
 
 
