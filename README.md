@@ -48,23 +48,30 @@ Foodonor is an End-to-End application which manages food waste effectively.
 
 <details>
   <summary><h2>Phase 2<h2></summary>
-  
-  ## Work Progress
 
 ## Phase 2 TODO List
 
 - [ ]  Landing Page
     - [x]  UI design
+    - [x]  Added feature of adding places and tracking places such as NGOs, Slums, Constuction sites etc.
 - [ ]  Mobile Application
     - [ ]  Onboarding Screen
     - [ ]  Splash Screen
-    - [x]  Login
+    - [x]  Login/Signup
     - [x]  Dashboard
     - [x]  Food Donation
+    - [x]  Added Maps Activity
+    - [x]  Integration with Google Maps API
+    - [x]  Added Home Activity (Dashboard for Food Donor)
+    - [x]  Added Sessions for Seamless Login and Signup
+    - [x]  Added OTP verification for checking user authenticity
+    - [x]  Integration with Firebase database
+    - [x]  Completed Donate Food Activity
     - [ ]  Educate/Learn
     - [ ]  Food Tracking
     - [ ]  Waste Management
 - [ ]  Admin Site
+    - [x]  Connection with database
     - [x]  NGO Request Verification through Email 
     - [x]  Admin Panel UI Design 
     - [x]  Admin Panel Implementation upto 70-80%
@@ -81,9 +88,11 @@ Foodonor is an End-to-End application which manages food waste effectively.
 
 - Admin Panel for Request and NGO Tracking
 
-<img src="https://user-images.githubusercontent.com/56217073/216752201-b7c016df-9d40-4d83-b75a-3712ae3faec7.png" width="70%"></img> 
-<img src="https://user-images.githubusercontent.com/56217073/216752206-f6ea71d7-d6e1-4865-af3c-4a6ed7886b61.png" width="70%"></img> 
-<img src="https://user-images.githubusercontent.com/56217073/216752210-9812fa60-18ba-48fb-8124-e42e8e70563b.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216778219-9605adb9-555e-4c04-a45e-b835e5ec699e.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216778225-02670531-fb79-49da-83b5-258b2d24d12a.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216778206-ea111b02-f241-4216-a4c6-f1cd78725fb7.png" width="70%"></img>
+<img src="https://user-images.githubusercontent.com/56217073/216778213-a8fecab5-6bb4-49ca-b0c6-803c2ce8c410.png" width="70%"></img>
+
 
 </details>
 <details>
