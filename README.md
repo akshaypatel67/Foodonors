@@ -1,7 +1,7 @@
 
 # Foodonor
 
-#### Overview
+## Overview
 Foodonor assists in managing food waste in daily life. Users and organisations register themselves and give food by the amount of food that has been wasted. Foodonor assists those who need food.
 
 Foodonor is an End-to-End application which manages food waste effectively.
@@ -9,7 +9,7 @@ Foodonor is an End-to-End application which manages food waste effectively.
 
 ## Work Progress
 
-- Login & Sing Up Modules in Android
+- Login & Sign Up Modules in Android
 - Donor Page in Android where users can upload images and submit the request for food donation
 - Admin module to verify NGOs and to access NGO's location from firebase which is stored by android app.
 
