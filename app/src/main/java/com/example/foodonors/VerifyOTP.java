@@ -12,6 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.chaos.view.PinView;
+import com.example.foodonors.HelperClasses.SessionManager;
+import com.example.foodonors.HelperClasses.UserHelperClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -22,6 +24,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -115,6 +119,15 @@ public class VerifyOTP extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
+                            DatabaseReference reference = rootNode.getReference("Users");
+
+                            UserHelperClass addNewUser = new UserHelperClass(phoneNo);
+                            reference.child(phoneNo).setValue(addNewUser);
+
+                            SessionManager sessionManager = new SessionManager(getApplicationContext(), SessionManager.SESSION_USERSESSION);
+                            sessionManager.createLoginSession(phoneNo);
 
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                             startActivity(intent);

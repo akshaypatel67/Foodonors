@@ -29,7 +29,8 @@ public class DonateFood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MapsActivity.class);
-                startActivity(i);
+//                startActivity(i);
+                startActivityForResult(i, 2);
             }
         });
 

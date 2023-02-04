@@ -2,12 +2,12 @@ package com.example.foodonors;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class HomeActivity extends AppCompatActivity {
-    Button btnDonateFood, btnGarabageWaste;
+    CardView btnDonateFood, btnGarabageWaste, btnLearningCenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
 
         btnDonateFood = findViewById(R.id.btn_donate_food);
         btnGarabageWaste = findViewById(R.id.btn_garbage_waste);
+        btnLearningCenter = findViewById(R.id.btn_learning_center);
 
         btnDonateFood.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), DonateFood.class);

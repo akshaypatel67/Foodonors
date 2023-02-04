@@ -52,6 +52,14 @@
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/cb_remember_me"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Remember Me" />
+
     <Button
         android:id="@+id/btn_next"
         android:layout_width="match_parent"
