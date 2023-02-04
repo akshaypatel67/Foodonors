@@ -14,20 +14,29 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.foodonors.HelperClasses.FoodHelperClass;
+import com.example.foodonors.HelperClasses.SessionManager;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
 public class DonateFood extends AppCompatActivity {
-    TextInputEditText etPrepTime;
+    TextInputEditText etPrepTime, quantity, contents;
     TextView locationText;
     Button locationButton, submitButton;
     LatLng location;
@@ -39,6 +48,9 @@ public class DonateFood extends AppCompatActivity {
 
         locationButton = findViewById(R.id.btn_location);
         locationText = findViewById(R.id.txt_address);
+
+        quantity = findViewById(R.id.quantity);
+        contents = findViewById(R.id.contents);
 
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,9 +116,31 @@ public class DonateFood extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                saveData();
             }
         });
+    }
+
+    private void saveData() {
+        HashMap<String, String> hashMap = SessionManager.getUsersDetailFromSession();
+        String phoneNumber = hashMap.get("phoneNumber");
+
+        String preparationTime = etPrepTime.getText().toString();
+        int qty = Integer.parseInt(quantity.getText().toString());
+        String desc = contents.getText().toString();
+
+        FoodHelperClass foodData = new FoodHelperClass(phoneNumber, preparationTime, desc, qty);
+
+        FirebaseDatabase.getInstance().getReference("Food")
+                .child(phoneNumber)
+                .setValue(foodData)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                        setIntent(intent);
+                    }
+                });
     }
 
     @Override
