@@ -17,14 +17,16 @@ Foodonor is an End-to-End application which manages food waste effectively.
 ## Screenshots
 
 - Donor Side Android App
-![image](https://user-images.githubusercontent.com/56217073/216752022-7d10e451-6f0c-4382-808f-caaf76001c2b.png)
-![image](https://user-images.githubusercontent.com/56217073/216752024-0d149bc6-64e8-45a7-bed1-a26756aeb16e.png)
-![image](https://user-images.githubusercontent.com/56217073/216752036-e328d6d9-ffed-4b49-96d5-08bc726adfba.png)
+
+![image](https://user-images.githubusercontent.com/56217073/216752022-7d10e451-6f0c-4382-808f-caaf76001c2b.png | width=20)
+![image](https://user-images.githubusercontent.com/56217073/216752024-0d149bc6-64e8-45a7-bed1-a26756aeb16e.png | width=20)
+![image](https://user-images.githubusercontent.com/56217073/216752036-e328d6d9-ffed-4b49-96d5-08bc726adfba.png | width=20)
 
 - Admin Panel for Request and NGO Tracking
-![image](https://user-images.githubusercontent.com/56217073/216752201-b7c016df-9d40-4d83-b75a-3712ae3faec7.png)
-![image](https://user-images.githubusercontent.com/56217073/216752206-f6ea71d7-d6e1-4865-af3c-4a6ed7886b61.png)
-![image](https://user-images.githubusercontent.com/56217073/216752210-9812fa60-18ba-48fb-8124-e42e8e70563b.png)
+
+![image](https://user-images.githubusercontent.com/56217073/216752201-b7c016df-9d40-4d83-b75a-3712ae3faec7.png | width=20)
+![image](https://user-images.githubusercontent.com/56217073/216752206-f6ea71d7-d6e1-4865-af3c-4a6ed7886b61.png | width=20)
+![image](https://user-images.githubusercontent.com/56217073/216752210-9812fa60-18ba-48fb-8124-e42e8e70563b.png | width=20)
 
 ## TODO
 
