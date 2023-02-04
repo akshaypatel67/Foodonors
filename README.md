@@ -32,7 +32,7 @@ Foodonor is an End to End application which managing food waste effectively.
 
 **Client:** [Android](https://developer.android.com/docs)
 
-**Admin:** [PHP](https://www.php.net/docs.php)
+**Admin:** [PHP](https://www.php.net/docs.php), [AdminConsole](https://adminlte.io)
 
 **Database:** [Firebase](https://firebase.google.com/docs)
 
@@ -44,4 +44,3 @@ Foodonor is an End to End application which managing food waste effectively.
 - [@Darshil Shah](https://www.github.com/shah-codex)
 - [@Prajit Matalia](https://www.github.com/prajit02)
 - [@Manav Takoliya](https://www.github.com/ManavTakoliya)
-
