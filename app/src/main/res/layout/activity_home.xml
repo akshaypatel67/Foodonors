@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <Button
-        android:id="@+id/btn_next3"
+        android:id="@+id/btn_garbage_waste"
         android:layout_width="168dp"
         android:layout_height="129dp"
         android:layout_marginTop="8dp"
@@ -62,11 +62,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toEndOf="@id/btn_next2"
+        app:layout_constraintStart_toEndOf="@id/btn_donate_food"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/btn_next2"
+        android:id="@+id/btn_donate_food"
         android:layout_width="168dp"
         android:layout_height="129dp"
         android:layout_marginLeft="30dp"
