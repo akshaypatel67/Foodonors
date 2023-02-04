@@ -14,7 +14,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
-    Button next;
+    Button next, btnLogin;
     TextInputLayout fullName, email, password, confirmpassword, phoneNumber;
     CountryCodePicker countryCodePicker;
 
@@ -29,9 +29,18 @@ public class SignUpActivity extends AppCompatActivity {
         confirmpassword = findViewById(R.id.signup_con_pass);
         phoneNumber = findViewById(R.id.phone_num);
         countryCodePicker = findViewById(R.id.country_code_picker);
+        btnLogin = findViewById(R.id.btn_login_acc);
 
         next = findViewById(R.id.btn_signup_next);
         next.setOnClickListener(view -> CallNextSigupScreen(view));
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void CallNextSigupScreen(View view) {
