@@ -16,14 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodonors">
         <activity
+            android:name=".LearnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WasteManage"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false">
@@ -42,13 +45,19 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".DonateFood"
-            android:exported="true"></activity>
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".VerifyOTP"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>

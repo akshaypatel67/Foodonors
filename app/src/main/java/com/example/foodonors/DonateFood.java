@@ -3,10 +3,12 @@ package com.example.foodonors;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.icu.util.Calendar;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,15 +22,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodonors.HelperClasses.FoodHelperClass;
 import com.example.foodonors.HelperClasses.SessionManager;
-import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -36,10 +35,14 @@ import java.util.List;
 import java.util.Locale;
 
 public class DonateFood extends AppCompatActivity {
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    MaterialButton cameraButton;
+
     TextInputEditText etPrepTime, quantity, contents;
     TextView locationText;
     Button locationButton, submitButton;
     LatLng location;
+    private Bitmap imageBitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +54,20 @@ public class DonateFood extends AppCompatActivity {
 
         quantity = findViewById(R.id.quantity);
         contents = findViewById(R.id.contents);
+        cameraButton = findViewById(R.id.btn_camera);
 
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivityForResult(i, 2);
+            }
+        });
+
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCamera();
             }
         });
 
@@ -121,6 +132,13 @@ public class DonateFood extends AppCompatActivity {
         });
     }
 
+    private void openCamera() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
     private void saveData() {
         HashMap<String, String> hashMap = SessionManager.getUsersDetailFromSession();
         String phoneNumber = hashMap.get("phoneNumber");
@@ -147,8 +165,11 @@ public class DonateFood extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == 2) {
-            if(resultCode == 2) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            imageBitmap = (Bitmap) extras.get("data");
+        } else if (requestCode == 2) {
+            if (resultCode == 2) {
                 Log.d("test", "test");
                 Double latitude = data.getDoubleExtra("latitude", 0);
                 Double longitude = data.getDoubleExtra("longitude", 0);

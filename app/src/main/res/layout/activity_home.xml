@@ -76,13 +76,14 @@
                             android:layout_height="64dp"
                             android:background="@drawable/circlebackgroundxml"
                             android:padding="10dp"
-                            android:src="@drawable/ic_baseline_location_searching_24" />
+                            android:src="@drawable/ic_baseline_fastfood_24"
+                            app:tint="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Banking"
+                            android:text="Donate Food"
                             android:textStyle="bold" />
 
                         <View
@@ -96,7 +97,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Check your bank activities"
+                            android:text="Donate exceeding food to needy ones !"
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
@@ -121,13 +122,13 @@
                             android:layout_height="64dp"
                             android:background="@drawable/circlebackgroundxml"
                             android:padding="10dp"
-                            android:src="@drawable/ic_baseline_location_searching_24" />
+                            android:src="@drawable/ic_baseline_settings_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Ideas"
+                            android:text="Waste Management"
                             android:textStyle="bold" />
 
                         <View
@@ -141,7 +142,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Check your bank activities"
+                            android:text="Efficiently and effectively manage and track your waste."
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>
@@ -176,13 +177,13 @@
                             android:layout_height="64dp"
                             android:background="@drawable/circlebackgroundxml"
                             android:padding="10dp"
-                            android:src="@drawable/ic_baseline_location_searching_24" />
+                            android:src="@drawable/ic_baseline_cast_for_education_24" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:text="Add"
+                            android:text="Learn Section"
                             android:textStyle="bold" />
 
                         <View
@@ -196,7 +197,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="Check your bank activities"
+                            android:text="Tips and Tricks to reduce and manage waste."
                             android:textColor="@android:color/darker_gray" />
 
                     </LinearLayout>

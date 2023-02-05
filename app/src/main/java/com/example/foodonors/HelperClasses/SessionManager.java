@@ -15,6 +15,8 @@ public class SessionManager {
     public static final String KEY_PHONENUMBER = "phoneNumber";
     public static final String KEY_SESSIONPHONENUMBER = "phoneNumber";
     public static final String KEY_SESSIONPASSWORD = "password";
+    public static final String KEY_LATTITUDE = "lattitude";
+    public static final String KEY_LONGITUDE = "logitude";
     private static final String IS_LOGIN = "isLoggedIn";
     private static final String IS_REMEMBERME = "isRememberMe";
     static SharedPreferences usersSession;
@@ -34,6 +36,8 @@ public class SessionManager {
         userData.put(KEY_EMAIL, usersSession.getString(KEY_EMAIL, null));
         userData.put(KEY_PASSWORD, usersSession.getString(KEY_PASSWORD, null));
         userData.put(KEY_PHONENUMBER, usersSession.getString(KEY_PHONENUMBER, null));
+        userData.put(KEY_LONGITUDE, usersSession.getString(KEY_LONGITUDE, null));
+        userData.put(KEY_LATTITUDE, usersSession.getString(KEY_LATTITUDE, null));
 
         return userData;
     }
