@@ -64,7 +64,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_edit"
                 app:tint="@color/secondaryDarkColor" />
 
             <ImageButton
@@ -78,7 +77,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/check"
                 tools:layout_editor_absoluteX="296dp"
                 tools:layout_editor_absoluteY="12dp" />
 

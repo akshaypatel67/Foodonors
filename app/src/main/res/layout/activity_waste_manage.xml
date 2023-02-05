@@ -143,21 +143,12 @@
         </LinearLayout>
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="520dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        //Add receycler view here</androidx.core.widget.NestedScrollView>
-
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btn_bg"
-        android:text="Post Donation"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDonate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 </LinearLayout>

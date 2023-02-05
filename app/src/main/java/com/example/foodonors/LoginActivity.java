@@ -49,10 +49,10 @@ public class LoginActivity extends AppCompatActivity {
         countryCodePicker = findViewById(R.id.country_code_picker);
         rememberMe = findViewById(R.id.cb_remember_me);
 
-        phoneLayout = findViewById(R.id.phone_num);
-        passLayout = findViewById(R.id.pass_layout);
-        phone = findViewById(R.id.phone);
-        pass = findViewById(R.id.pass);
+        phoneLayout = findViewById(R.id.phone_layout_1);
+        passLayout = findViewById(R.id.pass_layout_1);
+        phone = findViewById(R.id.phone_1);
+        pass = findViewById(R.id.pass_1);
         login = findViewById(R.id.btn_login);
         createacc = findViewById(R.id.btn_create_acc);
         rememberMe = findViewById(R.id.cb_remember_me);
